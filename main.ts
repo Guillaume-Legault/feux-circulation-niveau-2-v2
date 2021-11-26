@@ -5,27 +5,12 @@ function Cycle_pieton () {
     pins.digitalWritePin(DigitalPin.P16, 1)
     basic.pause(5000)
     pins.digitalWritePin(DigitalPin.P16, 0)
-    pins.digitalWritePin(DigitalPin.P8, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P8, 1)
+    for (let index = 0; index < 5; index++) {
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        basic.pause(500)
+        pins.digitalWritePin(DigitalPin.P8, 0)
+        basic.pause(500)
+    }
 }
 input.onButtonPressed(Button.A, function () {
     Pieton = 1
