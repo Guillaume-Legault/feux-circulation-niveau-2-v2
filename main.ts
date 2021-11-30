@@ -1,6 +1,3 @@
-radio.onReceivedNumber(function (receivedNumber) {
-    radio2 = receivedNumber
-})
 function Cycle_pieton () {
     fin_cycle_pieton = 0
     debut_cycle_pieton = 1
@@ -46,9 +43,7 @@ let fin_cycle_lumiere = 0
 let debut_cycle_pieton = 0
 let debut_cycle_lumiere = 0
 let Pieton = 0
-let radio2 = 0
 radio.setGroup(16)
-radio2 = 0
 Pieton = 0
 debut_cycle_lumiere = 0
 debut_cycle_pieton = 0
@@ -63,14 +58,12 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (fin_cycle_lumiere == 1) {
-        radio.sendNumber(5)
-    } else if (fin_cycle_pieton == 1) {
-        radio.sendNumber(7)
+    if (Pieton == 1 && debut_cycle_lumiere == 0) {
+        Cycle_pieton()
+        Pieton = 0
+    } else if (Pieton == 0 && debut_cycle_pieton == 0) {
+        Cycle_lumière()
     } else {
-    	
-    }
-    if (radio2 == 5) {
     	
     }
 })
